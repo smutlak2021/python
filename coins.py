@@ -40,6 +40,14 @@ def min_coin_change(coins, amount):
   return dp[amount] if dp[amount] != math.inf else -1
 
 # --- Example Usage ---
+
+coin_denominations1 = [1, 2, 5]
+target_amount1 = 2
+min_coins = min_coin_change(coin_denominations1, target_amount1)
+print(f"Coins: {coin_denominations1}, Amount: {target_amount1}")
+print(f"Minimum coins needed: {min_coins}") # Output: 3 (5 + 5 + 1)
+
+
 coin_denominations1 = [1, 2, 5]
 target_amount1 = 11
 min_coins = min_coin_change(coin_denominations1, target_amount1)
