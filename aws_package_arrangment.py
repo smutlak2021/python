@@ -5,12 +5,14 @@ import sys # To show memory usage estimate
 
 def findIndex(arr):
     n = len(arr)
-    for index in range(2, len(arr)):
-        arr[index -1] = arr[index-2] + arr[index-1]
-        if(arr[index-2]<=0):
-            return index-2;
+    for index in range(2, n):
+        first = index-2
+        second = index -1
+        arr[second] = arr[first] + arr[second]
+        if(arr[first]<=0):
+            return first
     
-    for i in range(len(arr)-2, len(arr)):
+    for i in range(n-2, n):
         if(arr[i]<=0):
             return i
         
@@ -18,7 +20,7 @@ def findIndex(arr):
 
 
 
-array_size = 100
+array_size = 10
 min_val = -10000
 max_val = 10000
 
