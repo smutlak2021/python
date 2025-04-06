@@ -20,7 +20,7 @@ def findIndex(arr):
 
 
 
-array_size = 8
+array_size = 1000
 min_val = -10000
 max_val = 10000
 
@@ -34,20 +34,12 @@ print(f"Generated {len(importance):,} integers in {end_time - start_time:.4f} se
 # importance = [2, 1, -4]
 # importance = [1, 2, -6, 3]
 # importance = [1, 2]
-importance = [9680, 7519, 3659, 2640, -609, -638, -2357, -4578]
+importance.sort(reverse=True)
+print(importance)
 n = len(importance)
 max = -1
-permutation_iterator = itertools.permutations(importance)
-end_time = time.time()
-print(f"Generated permutations {len(importance):,} integers in {end_time - start_time:.4f} seconds.")
-# all_possible_rearrangements = list(permutation_iterator)
-for p in permutation_iterator:
-# for permutation in all_possible_rearrangements:
-    arr = list(p)
-    print(arr)
-    v =findIndex(arr)
-    if(v>max):
-        max = v
+max =findIndex(importance)
+
 
 print("result=")
 print(max)
