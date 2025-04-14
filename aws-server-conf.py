@@ -25,5 +25,5 @@ eff = [75, 104, 72,72,8,125]
 costs = [1, 2, 2, 1, 2, 1]
 k = 376
 
-min_weight = reversed_knapsack(eff, costs, k)
-print(f"Minimum weight to achieve at least {k} value: {min_weight}")
+min_cost = reversed_knapsack(eff, costs, k)
+print(f"Minimum weight to achieve at least {k} value: {min_cost}")
